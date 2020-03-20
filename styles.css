@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&display=swap');
 
+:root{
+  --green: #64ffda;
+  --light-grey: #ccd6f6;
+  --dark-blue: #0a192f;
+}
+
 html{
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #0a192f;
+  background-color: var(--dark-blue);
   color: #8892b0;
   margin: 0;
   padding: 0;
@@ -14,7 +20,7 @@ body {
 }
 
 .number {
-  color: #64ffda;
+  color: var(--green);
   display: inline-block;
   font-size: 2rem;
   font-family: 'Fira Code', monospace;
@@ -24,7 +30,7 @@ body {
   display: inline-block;
   margin: 1vw;
   font-size: 2rem;
-  color: #ccd6f6;
+  color: var(--light-grey);
 }
 
 hr{
@@ -43,13 +49,14 @@ hr{
 }
 
 .nav-bar {
+
   margin: auto;
   padding-top: 0;
-  margin-left: 50vw;
+  margin-left: 50%;
 }
 
 .nav-list {
-  color: #64ffda;
+  color: var(--green);
 }
 
 .nav-item {
@@ -66,13 +73,13 @@ hr{
 }
 
 .nav-item a:hover{
-  color: #64ffda;
+  color: var(--green);
   transition: color 500ms;
 }
 
 .nav-list .resume {
   margin-left: 1vw;
-  border: 1px solid #64ffda;
+  border: 1px solid var(--green);
   margin:0;
   border-radius: 3px;
   height: 3vh;
@@ -89,7 +96,7 @@ hr{
 }
 
 .nav-list .resume-link{
-    color: #64ffda;
+    color: var(--green);
 
 }
 
@@ -102,13 +109,13 @@ hr{
 
 .hi {
   font-size: 1.5rem;
-  color: #64ffda;
+  color: var(--green);
   font-family: 'Fira Code', monospace;
 }
 
 .name {
   font-size: 4.2rem;
-  color: #ccd6f6;
+  color: var(--light-grey);
   margin: 0;
   margin-top: 3vh;
 }
@@ -143,7 +150,7 @@ hr{
   height: 70vh;
   width: 25vw;
   justify-self: center;
-  box-shadow: 2.7rem 2.7rem #0a192f, 2.8rem 2.8rem #64ffda;
+  box-shadow: 2.7rem 2.7rem var(--dark-blue), 2.8rem 2.8rem var(--green);
 }
 
 .about-me .content {
@@ -166,7 +173,7 @@ hr{
 
 .about-me .list-item::before {
   content: "▹  ";
-  color: #64ffda;
+  color: var(--green);
 }
 
 /* EXPERIENCE */
@@ -194,7 +201,7 @@ hr{
 }
 
 .company h3 {
-  color: #ccd6f6;
+  color: var(--light-grey);
   font-size: 2rem;
 }
 
@@ -215,7 +222,7 @@ hr{
 
 .company .list-item::before {
   content: "▹  ";
-  color: #64ffda;
+  color: var(--green);
 }
 
 
@@ -285,16 +292,16 @@ hr{
 .container .box .content h2 {
   margin: 0;
   padding: 0;
-  color: #ccd6f6;
+  color: var(--light-grey);
 }
 
 .container .box .content a {
   text-decoration: none;
-  color: #64ffda;
+  color: var(--green);
   padding: 4px;
   display: inline-block;
   margin: auto 2vw;
-  border: 1px solid #64ffda;
+  border: 1px solid var(--green);
   border-radius: 3px;
 }
 
@@ -351,11 +358,11 @@ hr{
   margin-top: 10vh;
   padding: 3vh 3vw;
   border-radius: 5px;
-  background-color: #0a192f;
-  border-color: #64ffda;
+  background-color: var(--dark-blue);
+  border-color: var(--green);
   border-style: solid;
   font-size: 1.2rem;
-  color: #64ffda;
+  color: var(--green);
   border-width: 0.1rem;
 }
 
@@ -385,7 +392,132 @@ hr{
 }
 
 .footer a:hover {
-  color: #64ffda;
+  color: var(--green);
   text-decoration: none;
   transition: color 200ms;
+}
+
+
+/*------------------------------------------- MOBILE -------------------------------------------*/
+
+@media(max-width: 980px) {
+
+  :root {font-size: 32px;}
+
+  /* NAVBAR */
+
+  .nav {
+    height: 0;
+    visibility: hidden;
+  }
+
+  /* HEADER */
+
+  .name {
+    font-size: 3rem;
+    width: 80vw;
+  }
+
+  .name.sub-name {
+    color: #8892b0;
+  }
+
+  .intro {
+    max-width: 80vw;
+  }
+
+  /* ABOUT ME */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid .profile-pic {
+    height: 50vh;
+    width: 70vw;
+  }
+
+  .about-me .content {
+    width: 80vw;
+  }
+
+  .about-me .list {
+    width: 80vw;
+  }
+
+  /* EXPERIENCE */
+
+  .experience .grid {
+    grid-gap: 5vh;
+  }
+
+  .grid .company-img {
+    height: 35vh;
+    width: 60vw;
+  }
+
+  .company .list {
+    width: 80vw;
+  }
+
+  .company.dollar-business {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  .company-img.dollar-business{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  /* WORK */
+
+  .container .box {
+    width: 70vw;
+    height: 70vh;
+  }
+
+  .container .box .content h2 {
+    font-size: 2rem;
+  }
+
+  .container .box .content p {
+      font-size: 1.5rem;
+  }
+
+  .container .box .content a {
+      font-size: 1.1rem;
+  }
+
+
+  .container .box:hover .content h2 {
+    font-size: 2rem;
+  }
+
+  .container .box:hover .content p {
+    font-size: 1.5rem;
+  }
+
+  .container .box:hover .content a {
+    font-size: 1.1rem;
+  }
+
+  .container .box .content a {
+    padding: 15px;
+  }
+
+  /* CONTACT */
+
+  .contact {
+    margin-left: 12vw;
+    margin-top: 50vh;
+    margin-right: 12vw;
+    text-align: center;
+  }
+
+  .contact p {
+    max-width: 100%;
+  }
+
 }
