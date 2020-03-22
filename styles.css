@@ -364,6 +364,7 @@ hr{
   font-size: 1.2rem;
   color: var(--green);
   border-width: 0.1rem;
+  cursor: pointer;
 }
 
 .contact button:hover {
