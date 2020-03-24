@@ -433,7 +433,7 @@ hr{
   }
 
   .grid .profile-pic {
-    height: 50vh;
+    height: 45vh;
   }
 
   .about-me .content {
@@ -451,7 +451,7 @@ hr{
   }
 
   .grid .company-img {
-    height: auto;
+    height: 30vh;
     width: 60vw;
   }
 
