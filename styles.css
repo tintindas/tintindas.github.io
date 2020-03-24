@@ -148,7 +148,7 @@ hr{
   margin-top: 50vh;
   display: inline-block;
   height: 70vh;
-  width: 25vw;
+  width: auto;
   justify-self: center;
   box-shadow: 2.7rem 2.7rem var(--dark-blue), 2.8rem 2.8rem var(--green);
 }
@@ -434,7 +434,6 @@ hr{
 
   .grid .profile-pic {
     height: 50vh;
-    width: 70vw;
   }
 
   .about-me .content {
@@ -452,7 +451,7 @@ hr{
   }
 
   .grid .company-img {
-    height: 35vh;
+    height: auto;
     width: 60vw;
   }
 
