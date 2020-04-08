@@ -194,8 +194,8 @@ hr{
 .grid .company-img {
   justify-self: center;
   margin-top: 5vh;
-  height: 35vh;
-  width: 15vw;
+  height: 33vh;
+  width: 33vh;
   border-radius: 50%;
   background: #fff;
 }
@@ -433,7 +433,8 @@ hr{
   }
 
   .grid .profile-pic {
-    height: 45vh;
+    width: 70vw;
+    height: auto;
   }
 
   .about-me .content {
