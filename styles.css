@@ -49,9 +49,10 @@ hr{
 }
 
 .nav-bar {
+  display: flex;
   width: 100vw;
   padding-top: 0;
-  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .nav-list {
@@ -80,11 +81,11 @@ hr{
   margin-left: 1vw;
   border: 1px solid var(--green);
   margin:0;
-  border-radius: 3px;
+  border-radius: 4px;
   height: 3vh;
   padding: 10px;
   padding-top: 8px;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   text-align: center;
   border-width: 0.1rem;
 }
