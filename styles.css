@@ -49,8 +49,7 @@ hr{
 }
 
 .nav-bar {
-
-  margin: auto;
+  width: 100vw;
   padding-top: 0;
   align-items: flex-end;
 }
