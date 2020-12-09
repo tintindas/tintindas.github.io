@@ -25,13 +25,16 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
-  color: #f0f6fc;
 }
 nav ul li {
   margin-right: 30px;
 }
 nav ul li:last-child {
   margin: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #f0f6fc;
 }
 
 .greeting {
@@ -55,6 +58,7 @@ nav ul li:last-child {
   transform-origin: 70% 70%;
   /* Pivot around the bottom-left palm */
   display: inline-block;
+  font-size: 1.3em;
 }
 
 @keyframes wave-animation {
