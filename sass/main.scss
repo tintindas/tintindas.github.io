@@ -1,2 +1,5 @@
-@use './sections/header';
-@use './elements/wave';
+// import base styles
+@use 'base';
+
+@use 'sections/header';
+@use 'elements/wave';
