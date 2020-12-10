@@ -85,6 +85,38 @@ section h2:after {
     transform: rotate(0deg);
   }
 }
+g#Cat {
+  animation: pop-out 3s ease-out forwards;
+}
+
+@keyframes pop-out {
+  0% {
+    transform: translateX(-2%) translateY(3%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+path#Tail {
+  animation: tail-wave linear 1.5s;
+  animation-delay: 2s;
+  transform-origin: bottom;
+}
+
+@keyframes tail-wave {
+  0% {
+    transform: rotate(1deg);
+  }
+  33% {
+    transform: rotate(-1deg);
+  }
+  66% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 header {
   margin: 0;
   display: grid;
