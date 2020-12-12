@@ -146,10 +146,10 @@ nav ul li:last-child {
   margin: 0;
 }
 nav ul li:last-child a {
-  color: #64ffda;
+  color: #9e99ff;
 }
 nav ul li:last-child a:after {
-  background: #64ffda;
+  background: #9e99ff;
 }
 nav ul li a {
   text-decoration: none;
