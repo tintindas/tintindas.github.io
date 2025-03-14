@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets'
+import githubIcon from '../assets/github.svg'
+import xIcon from '../assets/x.svg'
+import linkedinIcon from '../assets/linkedin.svg'
+---
+
+<div class="w-full gap-8 grid grid-cols-3">
+  <div>
+    <h1>
+      <a href="/" class="font-bold">Upamanyu Das</a>
+    </h1>
+    <p class="font-light text-gray-500">Software Engineer</p>
+  </div>
+  <div class="text-gray-600 col-span-2 text-base/8">
+    <p> Hey, I'm Upamanyu! Welcome to my corner of the internet.</p>
+    <p> 
+        Currently, I am a student at the
+        <a href="https://uni-freiburg.de/en/" class="underline">University of Freiburg</a>.
+    </p>
+    <p>
+      I also work as a software engineer at
+      <a href="https://greenventory.de/en/home/" class="underline">greenventory</a>.
+    </p>
+    <p>You can find me on the internet at:</p>
+    <ul class="flex list-none mt-4 space-x-5">
+      <li>
+        <a href="https://github.com/tintindas">
+          <Image src={githubIcon} alt="github icon" class="opacity-60 hover:opacity-100" />
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/tintin_das">
+          <Image src={xIcon} alt="x icon" class="opacity-60 hover:opacity-100" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/upamanyu-das/">
+          <Image src={linkedinIcon} alt="x icon" class="opacity-60 hover:opacity-100" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
