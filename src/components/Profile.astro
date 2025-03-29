@@ -1,42 +1,59 @@
 ---
 import { Image } from 'astro:assets'
-import githubIcon from '../assets/github.svg'
+import githubIcon from '../assets/github_no_bg.svg'
 import xIcon from '../assets/x.svg'
 import linkedinIcon from '../assets/linkedin.svg'
+import instagramIcon from '../assets/instagram.svg'
 ---
 
 <div class="w-full gap-8 grid grid-cols-3">
-  <div>
+  <div class="text-base/6 border-b-[1px] border-gray-300 pb-6">
     <h1>
       <a href="/" class="font-bold">Upamanyu Das</a>
     </h1>
     <p class="font-light text-gray-500">I write code and pet cats.</p>
   </div>
-  <div class="text-gray-600 col-span-2 text-base/8">
-    <p> Hey, I'm Upamanyu! Welcome to my corner of the internet.</p>
-    <p> 
-        Currently, I am a student at the
-        <a href="https://uni-freiburg.de/en/" class="underline">University of Freiburg</a>.
-    </p>
+  <div class="text-gray-800 col-span-2 text-base/6 border-b-[1px] border-gray-300 pb-6 space-y-4">
     <p>
-      I also work as a software engineer at
-      <a href="https://greenventory.de/en/home/" class="underline">greenventory</a>.
+      <span class="block"> Hey, I'm Upamanyu! </span>
+      <span class="block"> 
+          Currently, I am a student at the
+          <a href="https://uni-freiburg.de/en/" class="underline">University of Freiburg</a>.
+      </span>
+      <span class="block">
+        I also work as a software engineer at
+        <a href="https://greenventory.de/en/home/" class="underline">greenventory</a>.
+      </span>
     </p>
+
+    <p>
+      I am interested in AI, graph theory and scalable software systems.
+    </p>
+
+    <p>
+      When I am not in front of a terminal, I enjoy running, reading, and lifting.
+    </p>
+
     <p>You can find me on the internet at:</p>
     <ul class="flex list-none mt-4 space-x-5">
       <li>
         <a href="https://github.com/tintindas">
-          <Image src={githubIcon} alt="github icon" class="opacity-60 hover:opacity-100" />
+          <Image src={githubIcon} alt="github icon" class="opacity-60 hover:opacity-100 size-6" />
         </a>
       </li>
       <li>
         <a href="https://twitter.com/tintin_das">
-          <Image src={xIcon} alt="x icon" class="opacity-60 hover:opacity-100" />
+          <Image src={xIcon} alt="x icon" class="opacity-60 hover:opacity-100 size-6" />
         </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/upamanyu-das/">
-          <Image src={linkedinIcon} alt="x icon" class="opacity-60 hover:opacity-100" />
+          <Image src={linkedinIcon} alt="x icon" class="opacity-60 hover:opacity-100 size-6" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/tintin_das/">
+          <Image src={instagramIcon} alt="instagram icon" class="opacity-60 hover:opacity-100 size-6" />
         </a>
       </li>
     </ul>
