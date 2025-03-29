@@ -4,10 +4,16 @@ import githubIcon from '../assets/github_no_bg.svg'
 import xIcon from '../assets/x.svg'
 import linkedinIcon from '../assets/linkedin.svg'
 import instagramIcon from '../assets/instagram.svg'
+import profilePic from '../assets/me.jpg'
 ---
 
 <div class="w-full gap-8 grid grid-cols-3">
   <div class="text-base/6 border-b-[1px] border-gray-300 pb-6">
+    <Image 
+      src={profilePic} 
+      alt="A picture of me lying in the grass surrouned by flowers. Freiburg, Germany, 2025"
+      class="rounded-full w-5/6 object-cover mb-5" 
+    />
     <h1>
       <a href="/" class="font-bold">Upamanyu Das</a>
     </h1>
@@ -15,7 +21,9 @@ import instagramIcon from '../assets/instagram.svg'
   </div>
   <div class="text-gray-800 col-span-2 text-base/6 border-b-[1px] border-gray-300 pb-6 space-y-4">
     <p>
-      <span class="block"> Hey, I'm Upamanyu! </span>
+    <span class="block"> Hey, I'm Upamanyu!</span>
+    </p>
+    <p>
       <span class="block"> 
           Currently, I am a student at the
           <a href="https://uni-freiburg.de/en/" class="underline">University of Freiburg</a>.
