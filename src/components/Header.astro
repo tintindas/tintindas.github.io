@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets"
 import copyrightImage from "../assets/copyright.svg"
+import menuIcon from "../assets/menu_icon.svg"
+import closeIcon from "../assets/close.svg"
 ---
 
 <header class="flex items-center h-12 justify-center sticky top-0 z-50">
@@ -15,18 +17,66 @@ import copyrightImage from "../assets/copyright.svg"
       />
     </a>
   </div>
-  
+
   <!-- Nav -->
-  <div class="mx-auto w-6/12">
-    <nav class="text-sm text-gray-500">
-      <ul class="flex items-center justify-center gap-6">
-        <li class="hover:text-gray-700"><a href="/blog/">Blog</a></li>
-        <li class="hover:text-gray-700"><a href="/tech/">Tech</a></li>
-        <li class="hover:text-gray-700"><a href="/projects/">Projects</a></li>
-        <li class="hover:text-gray-700"><a href="/reading/">Reading</a></li>
-        <li class="hover:text-gray-700"><a href="/photography/">Photography</a></li>
-        <li class="hover:text-gray-700"><a href="/collections/">Collections</a></li>
+  <button 
+    id="menu-btn" 
+    class="md:hidden ml-auto hover:cursor-pointer focus:outline-none z-20"
+  >
+      <Image 
+        id="menuIcon"
+        src={menuIcon} 
+        alt="menu icon. three parallel lines stacked vertically."
+        class="size-8"
+      />
+      <Image 
+        id="closeIcon"
+        src={closeIcon} 
+        alt="close icon. an 'X' to close the menu."
+        class="size-8 hidden"
+      />
+  </button>
+
+  <div id="navbar" class="ml-auto fixed w-3/4 h-full right-0 top-0 z-10
+    transform transition-transform duration-300 translate-x-full ease-in-out
+    md:mx-auto md:static md:block md:w-6/12 md:items-center md:content-center md:translate-0">
+    <nav 
+      class="text-sm h-full bg-slate-100 text-gray-700 shadow-teal-50 shadow-xl
+      md:content-center md:text-gray-500 md:bg-slate-50"
+    >
+      <ul 
+        class="flex flex-col h-full gap-6 justify-evenly items-center
+        md:flex-row md:flex md:h-fit">
+        <li class="hover:text-gray-900 md:hover:text-gray-700"><a href="/blog/">Blog</a></li>
+        <li class="hover:text-gray-900 md:hover:text-gray-700"><a href="/tech/">Tech</a></li>
+        <li class="hover:text-gray-900 md:hover:text-gray-700"><a href="/projects/">Projects</a></li>
+        <li class="hover:text-gray-900 md:hover:text-gray-700"><a href="/reading/">Reading</a></li>
+        <li class="hover:text-gray-900 md:hover:text-gray-700"><a href="/photography/">Photography</a></li>
+        <li class="hover:text-gray-900 md:hover:text-gray-700"><a href="/collections/">Collections</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn")
+  const navBar = document.getElementById("navbar")
+  const menuIcon = document.getElementById("menuIcon")
+  const closeIcon = document.getElementById("closeIcon")
+
+  let isOpen = false
+
+  menuBtn?.addEventListener("click", () => {
+    isOpen = !isOpen
+
+    // Toggle Navbar
+    navBar?.classList.toggle("translate-x-full")
+    navBar?.classList.toggle("translate-x-0")
+
+    //// Toggle Icons
+    menuIcon?.classList.toggle('hidden', isOpen);
+    closeIcon?.classList.toggle('hidden', !isOpen);
+  })
+
+
+</script>

@@ -8,39 +8,38 @@ import profilePic from '../assets/me.jpg'
 ---
 
 <div class="w-full gap-8 grid grid-cols-3">
-  <div class="text-base/6 border-b-[1px] border-gray-300 pb-6">
+  <div class="text-base/6 border-b-[1px] md:col-span-1 col-span-3 border-gray-300 pb-6 flex-col flex">
     <Image 
       src={profilePic} 
       alt="A picture of me lying in the grass surrouned by flowers. Freiburg, Germany, 2025"
-      class="rounded-full w-5/6 object-cover mb-5" 
+      class="rounded-full md:w-5/6 object-cover mb-5 justify-center border-teal-500 border-3 p-1"
     />
-    <h1>
+    <h1 class="text-center text-2xl 
+      md:text-left">
       <a href="/" class="font-bold">Upamanyu Das</a>
     </h1>
-    <p class="font-light text-gray-500">I write code and pet cats.</p>
+    <p class="font-light text-gray-500 text-center text-lg
+      md:text-left">I write code and pet cats.</p>
   </div>
-  <div class="text-gray-800 col-span-2 text-base/6 border-b-[1px] border-gray-300 pb-6 space-y-4">
-    <p>
-    <span class="block"> Hey, I'm Upamanyu!</span>
-    </p>
-    <p>
-      <span class="block"> 
-          Currently, I am a student at the
-          <a href="https://uni-freiburg.de/en/" class="underline">University of Freiburg</a>.
-      </span>
-      <span class="block">
-        I also work as a software engineer at
-        <a href="https://greenventory.de/en/home/" class="underline">greenventory</a>.
-      </span>
-    </p>
+  <div 
+    class="text-gray-800 col-span-3 text-base/6 
+      border-b-[1px] border-gray-300 pb-6 space-y-4
+      md:col-span-2">
+    <p> Hey, I'm Upamanyu! </p>
 
     <p>
-      I am interested in AI, graph theory and scalable software systems.
+      Currently, I am a student at the
+      <a href="https://uni-freiburg.de/en/" class="underline text-teal-600">University of Freiburg</a>.
+    </p>
+    
+    <p>
+      I also work as a software engineer at
+      <a href="https://greenventory.de/en/home/" class="underline text-teal-600">greenventory</a>.
     </p>
 
-    <p>
-      When I am not in front of a terminal, I enjoy running, reading, and lifting.
-    </p>
+    <p> I am interested in AI, graph theory and scalable software systems. </p>
+
+    <p> When I am not in front of a terminal, I enjoy running, reading, and lifting. </p>
 
     <p>You can find me on the internet at:</p>
     <ul class="flex list-none mt-4 space-x-5">
@@ -65,5 +64,6 @@ import profilePic from '../assets/me.jpg'
         </a>
       </li>
     </ul>
+
   </div>
 </div>
