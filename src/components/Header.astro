@@ -1,40 +1,40 @@
 ---
-import { Image } from "astro:assets"
-import copyrightImage from "../assets/copyright.svg"
-import menuIcon from "../assets/menu_icon.svg"
-import closeIcon from "../assets/close.svg"
+import Logo from "../assets/copyright.svg"
+import { Moon, Sun, Menu, X } from '@lucide/astro'
 ---
 
-<header class="flex items-center h-12 justify-center sticky top-0 z-50 bg-slate-50">
+<header class="flex items-center h-12 justify-center sticky top-0 z-50">
   <!-- Logo -->
   <div>
-
     <a class="cursor-pointer" href="/">
-      <Image 
-        src={copyrightImage} 
-        alt="copyright icon. the letter c inscribed in a circle"
-        class="size-8"
-      />
+      <Logo
+        class="size-8 text-gray-800 dark:text-slate-50" 
+       /> 
     </a>
   </div>
 
   <!-- Nav -->
+  <button type="button" id="theme-selector-mobile" 
+    class="ml-auto mr-4 md:hidden"
+  >
+    <span class="sr-only">Enable <span class="dark:hidden">light</span><span class="hidden dark:inline">dark</span> mode</span>
+    <Moon class="dark:hidden" />
+    <span class="dark:text-slate-200">
+      <Sun class="hidden dark:inline" />
+    </span>
+  </button>
   <button 
     id="menu-btn" 
-    class="md:hidden ml-auto hover:cursor-pointer focus:outline-none z-20"
+    class="md:hidden hover:cursor-pointer focus:outline-none z-20"
   >
-      <Image 
-        id="menuIcon"
-        src={menuIcon} 
-        alt="menu icon. three parallel lines stacked vertically."
-        class="size-8"
-      />
-      <Image 
-        id="closeIcon"
-        src={closeIcon} 
-        alt="close icon. an 'X' to close the menu."
-        class="size-8 hidden"
-      />
+    <Menu
+      id="menuIcon"
+      class="size-8 text-gray-700 dark:text-slate-200"
+    />
+    <X
+      id="closeIcon"
+      class="size-8 hidden text-gray-700 dark:text-slate-200"
+    />
   </button>
 
   <div id="navbar" class="ml-auto fixed w-3/4 h-full right-0 top-0 z-10
@@ -42,8 +42,9 @@ import closeIcon from "../assets/close.svg"
     md:mx-auto md:static md:block md:w-6/12 md:items-center md:content-center 
     md:translate-0">
     <nav 
-      class="text-sm h-full bg-slate-100 text-gray-700 shadow-teal-50 shadow-xl
-      md:content-center md:text-gray-500 md:bg-slate-50"
+      class="text-md h-full text-gray-700 shadow-md rounded-md bg-slate-50
+      md:content-center md:text-sm
+      dark:text-slate-300 dark:bg-slate-900"
     >
       <ul 
         class="flex flex-col h-full gap-6 justify-evenly items-center
@@ -75,6 +76,16 @@ import closeIcon from "../assets/close.svg"
       </ul>
     </nav>
   </div>
+  
+  <button type="button" id="theme-selector-desktop"
+     class="hidden mr-4 md:inline" 
+   > 
+     <span class="sr-only">Enable <span class="dark:hidden">light</span><span class="hidden dark:inline">dark</span> mode</span> 
+     <Moon class="dark:hidden" /> 
+     <span class="dark:text-slate-200"> 
+       <Sun class="hidden dark:inline" /> 
+     </span> 
+   </button> 
 </header>
 
 <script>
@@ -96,6 +107,5 @@ import closeIcon from "../assets/close.svg"
     menuIcon?.classList.toggle('hidden', isOpen);
     closeIcon?.classList.toggle('hidden', !isOpen);
   })
-
 
 </script>
