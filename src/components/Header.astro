@@ -1,6 +1,6 @@
 ---
 import Logo from "../assets/copyright.svg"
-import { Moon, Sun, Menu, X } from '@lucide/astro'
+import { MoonStar, Sun, Menu, X } from '@lucide/astro'
 ---
 
 <header class="flex items-center h-12 justify-center sticky top-0 z-50">
@@ -15,10 +15,9 @@ import { Moon, Sun, Menu, X } from '@lucide/astro'
 
   <!-- Nav -->
   <button type="button" id="theme-selector-mobile" 
-    class="ml-auto mr-4 md:hidden"
+    class="ml-auto mr-4 md:hidden cursor-pointer"
   >
-    <span class="sr-only">Enable <span class="dark:hidden">light</span><span class="hidden dark:inline">dark</span> mode</span>
-    <Moon class="dark:hidden" />
+    <MoonStar class="dark:hidden" />
     <span class="dark:text-slate-200">
       <Sun class="hidden dark:inline" />
     </span>
@@ -42,8 +41,8 @@ import { Moon, Sun, Menu, X } from '@lucide/astro'
     md:mx-auto md:static md:block md:w-6/12 md:items-center md:content-center 
     md:translate-0">
     <nav 
-      class="text-md h-full text-gray-700 shadow-md rounded-md bg-slate-50
-      md:content-center md:text-sm
+      class="text-md h-full text-gray-700 shadow-md  rounded-md bg-slate-50
+      md:content-center md:text-sm md:shadow-none
       dark:text-slate-300 dark:bg-slate-900"
     >
       <ul 
@@ -78,10 +77,9 @@ import { Moon, Sun, Menu, X } from '@lucide/astro'
   </div>
   
   <button type="button" id="theme-selector-desktop"
-     class="hidden mr-4 md:inline" 
+     class="hidden mr-4 md:inline cursor-pointer" 
    > 
-     <span class="sr-only">Enable <span class="dark:hidden">light</span><span class="hidden dark:inline">dark</span> mode</span> 
-     <Moon class="dark:hidden" /> 
+     <MoonStar class="dark:hidden" /> 
      <span class="dark:text-slate-200"> 
        <Sun class="hidden dark:inline" /> 
      </span> 
