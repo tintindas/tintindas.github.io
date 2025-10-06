@@ -17,7 +17,9 @@ import { MoonStar, Sun, Menu, X } from '@lucide/astro'
   <button type="button" id="theme-selector-mobile" 
     class="ml-auto mr-4 md:hidden cursor-pointer"
   >
-    <MoonStar class="dark:hidden" />
+    <span class="text-gray-600">
+      <MoonStar class="dark:hidden" />
+    </span>
     <span class="dark:text-slate-200">
       <Sun class="hidden dark:inline" />
     </span>
@@ -48,28 +50,34 @@ import { MoonStar, Sun, Menu, X } from '@lucide/astro'
       <ul 
         class="flex flex-col h-full gap-6 justify-evenly items-center
         md:flex-row md:flex md:h-fit">
-        <li class="hover:text-gray-900 md:hover:text-gray-700 transform 
-          transition-transform hover:scale-105 hover:-translate-y-0.5">
+        <li class="hover:text-gray-900 md:hover:text-gray-900 
+          transform transition-transform hover:scale-105 
+          hover:-translate-y-0.5 dark:md:hover:text-slate-50">
           <a href="/blog/">Blog</a>
         </li>
-        <li class="hover:text-gray-900 md:hover:text-gray-700 transform 
-          transition-transform hover:scale-105 hover:-translate-y-0.5">
+        <li class="hover:text-gray-900 md:hover:text-gray-900 
+          transform transition-transform hover:scale-105 
+          hover:-translate-y-0.5 dark:md:hover:text-slate-50">
           <a href="/tech/">Tech</a>
         </li>
-        <li class="hover:text-gray-900 md:hover:text-gray-700 transform 
-          transition-transform hover:scale-105 hover:-translate-y-0.5">
+        <li class="hover:text-gray-900 md:hover:text-gray-900 
+          transform transition-transform hover:scale-105 
+          hover:-translate-y-0.5 dark:md:hover:text-slate-50">
           <a href="/projects/">Projects</a>
         </li >
-        <li class="hover:text-gray-900 md:hover:text-gray-700 transform 
-          transition-transform hover:scale-105 hover:-translate-y-0.5">
+        <li class="hover:text-gray-900 md:hover:text-gray-900 
+          transform transition-transform hover:scale-105 
+          hover:-translate-y-0.5 dark:md:hover:text-slate-50">
           <a href="/reading/">Reading</a>
         </li>
-        <li class="hover:text-gray-900 md:hover:text-gray-700 transform 
-          transition-transform hover:scale-105 hover:-translate-y-0.5">
+        <li class="hover:text-gray-900 md:hover:text-gray-900 
+          transform transition-transform hover:scale-105 
+          hover:-translate-y-0.5 dark:md:hover:text-slate-50">
           <a href="/photography/">Photography</a>
         </li>
-        <li class="hover:text-gray-900 md:hover:text-gray-700 transform 
-          transition-transform hover:scale-105 hover:-translate-y-0.5">
+        <li class="hover:text-gray-900 md:hover:text-gray-900 
+          transform transition-transform hover:scale-105 
+          hover:-translate-y-0.5 dark:md:hover:text-slate-50">
           <a href="/collections/">Collections</a>
         </li>
       </ul>
@@ -79,10 +87,12 @@ import { MoonStar, Sun, Menu, X } from '@lucide/astro'
   <button type="button" id="theme-selector-desktop"
      class="hidden mr-4 md:inline cursor-pointer" 
    > 
-     <MoonStar class="dark:hidden" /> 
-     <span class="dark:text-slate-200"> 
-       <Sun class="hidden dark:inline" /> 
-     </span> 
+    <span class="text-gray-600">
+      <MoonStar class="dark:hidden" />
+    </span>
+    <span class="dark:text-slate-200"> 
+      <Sun class="hidden dark:inline" /> 
+    </span> 
    </button> 
 </header>
 

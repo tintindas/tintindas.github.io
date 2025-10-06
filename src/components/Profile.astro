@@ -1,10 +1,15 @@
 ---
 import { Image } from 'astro:assets'
 import githubIcon from '../assets/github_no_bg.svg'
+import githubIconDark from '../assets/github_no_bg_dark.svg'
 import xIcon from '../assets/x.svg'
+import xIconDark from '../assets/x_dark.svg'
 import linkedinIcon from '../assets/linkedin.svg'
+import linkedinIconDark from '../assets/linkedin_dark.svg'
 import instagramIcon from '../assets/instagram.svg'
+import instagramIconDark from '../assets/instagram_dark.svg'
 import profilePic from '../assets/me.jpg'
+import { Instagram, Twitter, Github, Linkedin } from '@lucide/astro'
 ---
 
 <div class="w-full gap-8 grid grid-cols-3">
@@ -14,27 +19,29 @@ import profilePic from '../assets/me.jpg'
       alt="A picture of me lying in the grass surrouned by flowers. Freiburg, Germany, 2025"
       class="rounded-full md:w-5/6 object-cover mb-5 justify-center border-teal-500 border-3 p-1"
     />
-    <h1 class="text-center text-2xl 
+    <h1 class="text-center text-2xl dark:text-gray-50
       md:text-left">
       <a href="/" class="font-bold">Upamanyu Das</a>
     </h1>
     <p class="font-light text-gray-500 text-center text-lg
-      md:text-left">I write code and pet cats.</p>
+      md:text-left dark:text-gray-300">
+      I write code and pet cats.
+    </p>
   </div>
   <div 
-    class="text-gray-800 col-span-3 text-base/6 
+    class="text-gray-800 dark:text-gray-200 col-span-3 text-base/6 
       border-b-[1px] border-gray-300 pb-6 space-y-4
       md:col-span-2">
     <p> Hey, I'm Upamanyu! </p>
 
     <p>
       Currently, I am a student at the
-      <a href="https://uni-freiburg.de/en/" class="underline text-teal-600">University of Freiburg</a>.
+      <a href="https://uni-freiburg.de/en/" class="underline text-teal-600 dark:text-teal-400">University of Freiburg</a>.
     </p>
     
     <p>
       I also work as a software engineer at
-      <a href="https://greenventory.de/en/home/" class="underline text-teal-600">greenventory</a>.
+      <a href="https://greenventory.de/en/home/" class="underline text-teal-600 dark:text-teal-400">greenventory</a>.
     </p>
 
     <p> I am interested in AI, graph theory and scalable software systems. </p>
@@ -45,22 +52,26 @@ import profilePic from '../assets/me.jpg'
     <ul class="flex list-none mt-4 space-x-5">
       <li>
         <a href="https://github.com/tintindas">
-          <Image src={githubIcon} alt="github icon" class="opacity-60 hover:opacity-100 size-6" />
+          <Image src={githubIcon} alt="github icon" class="opacity-60 hover:opacity-100 size-6 dark:hidden" />
+          <Image src={githubIconDark} alt="github icon" class="opacity-60 hover:opacity-100 size-6 hidden dark:inline" />
         </a>
       </li>
       <li>
         <a href="https://twitter.com/tintin_das">
-          <Image src={xIcon} alt="x icon" class="opacity-60 hover:opacity-100 size-6" />
+          <Image src={xIcon} alt="x icon" class="opacity-60 hover:opacity-100 size-6 dark:hidden" />
+          <Image src={xIconDark} alt="github icon" class="opacity-60 hover:opacity-100 size-6 hidden dark:inline" />
         </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/upamanyu-das/">
-          <Image src={linkedinIcon} alt="x icon" class="opacity-60 hover:opacity-100 size-6" />
+          <Image src={linkedinIcon} alt="x icon" class="opacity-60 hover:opacity-100 size-6 dark:hidden" />
+          <Image src={linkedinIconDark} alt="github icon" class="opacity-60 hover:opacity-100 size-6 hidden dark:inline" />
         </a>
       </li>
       <li>
         <a href="https://www.instagram.com/tintin_das/">
-          <Image src={instagramIcon} alt="instagram icon" class="opacity-60 hover:opacity-100 size-6" />
+          <Image src={instagramIcon} alt="instagram icon" class="opacity-60 hover:opacity-100 size-6 dark:hidden" />
+          <Image src={instagramIconDark} alt="github icon" class="opacity-60 hover:opacity-100 size-6 hidden dark:inline" />
         </a>
       </li>
     </ul>

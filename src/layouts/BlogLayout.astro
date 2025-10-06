@@ -1,0 +1,49 @@
+---
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+const {page_title = "Blog"} = Astro.props
+const title = `Upamanyu Das | ${page_title}`
+---
+<!doctype html>
+<html lang="en" class="m-0 w-full h-full">
+	<head>
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+	</head>
+	<body class="m-0 flex h-full w-full bg-slate-50 text-slate-900 transition-colors dark:bg-slate-900 dark:text-slate-100">
+    <div class="mx-auto flex min-h-full w-5/6 flex-col md:w-1/2">
+      <Header />
+      <main class="container mx-auto w-full flex-grow py-6">
+        <h1 class="mb-6 mt-2 text-2xl font-semibold md:mt-4">{page_title}.</h1>
+        <div>
+          <slot />
+        </div>
+      </main>
+      <Footer />
+    </div>
+	</body>
+  <script>
+    const root = document.documentElement;
+    const toggleTheme = () => {
+      const isDark = root.classList.contains('dark');
+      root.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'light': 'dark');
+    };
+    document.getElementById('theme-selector-mobile')?.addEventListener('click', () => {
+      toggleTheme()
+    });
+    document.getElementById('theme-selector-desktop')?.addEventListener('click', () => {
+      toggleTheme()
+    });
+  </script>
+</html>
